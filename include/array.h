@@ -1,11 +1,11 @@
 #pragma once
-#include <vector>
 #include <stdexcept>
 #include <cstddef>
+#include "base_array.h"
 
 class Array {
 private:
-    std::vector<unsigned char> v;
+    BaseArray<unsigned char> v;
 
     void validateDigit(unsigned char d) const {
         if (d > 3) throw std::invalid_argument("digit must be 0–3");
